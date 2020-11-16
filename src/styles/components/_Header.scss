@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
-.header{
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');.header{
     font-family: 'Rokkitt', serif;
     font-size: 55px;
 
@@ -28,12 +27,16 @@
 
 .header-nav-list-item {
     margin-right: 10px;
-    padding: 2px;
+    padding: 0 10px 0 10px;
     cursor: pointer;
-    line-height: 44px;
+    line-height: 60px;
     position: relative;
-    font-family: 'Playfair Display', serif;
-    transition: all .3s cubic-bezier(.2, 0, 0, 1);
+    font-family: 'Lora', serif;
+    transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+    color: black;
+    text-decoration: none;
+    font-size: 22px;
+    text-transform: uppercase;
 
     &:after {
     content: '';
@@ -48,8 +51,8 @@
     transition: all .3s cubic-bezier(.2, 0, 0, 1);
     transform-origin: bottom center;
 
-    }&:hover {
-    color: white;
+    }&:hover{
+        color: black;
     &:after {
         right: 0;
         left: 0;

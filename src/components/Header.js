@@ -23,18 +23,11 @@ function Header() {
                     </div>
                     <div className="header-nav">
                         <ul className="header-nav-list">
-                            <div className="header-nav-list-item">
-                                <li><Link to='/'>About</Link></li>
-                            </div>
-                            <div className="header-nav-list-item">
-                                <li><Link to='/'>Books</Link></li>
-                            </div>
-                            <div className="header-nav-list-item">
-                                <li><Link to='/'>My Shelf</Link></li>
-                            </div>
-                            <div className="header-nav-list-item">
-                                <li><Link to='/'>Contact</Link></li>
-                            </div>
+                            <Link className='header-nav-list-item' to='/books'>Books</Link>
+                            <Link className='header-nav-list-item' to='/books'>Books</Link>
+                            <Link className='header-nav-list-item' to='/books'>Books</Link>
+                            <Link className='header-nav-list-item' to='/books'>Books</Link>
+                            <Link className='header-nav-list-item' to='/books'>Books</Link>
                         </ul>
                     </div>
                 </div>

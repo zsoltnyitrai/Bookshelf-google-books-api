@@ -13,7 +13,7 @@ function Menu() {
                             <li><Link to='/'>About</Link></li>
                         </div>
                         <div className = 'nav-list-item'>
-                            <li><Link to='/'>Products</Link></li>
+                            <li><Link to='/books'>Books</Link></li>
                         </div>
                         <div className = 'nav-list-item'>
                             <li><Link to='/'>Services</Link></li>
