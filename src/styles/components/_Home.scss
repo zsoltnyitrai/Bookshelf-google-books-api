@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+.home-left-image{
+    height: 800px;
+    text-align: center;
+}
+.home{
+    display: flex;
+    margin: 0 80px;
+    justify-content: center;
+}
+.home-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.home-right-button{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.home-button{
+    border-width: 2px;
+    margin: 20px auto 0;    
+    border-color: #454545;
+    color: #454545;
+    border-radius: 50px;
+    padding: 20px 50px;
+    font-size: 30px;
+    background: none;
+    letter-spacing: 5px;
+    cursor: pointer;
+}
+
+.home-button-icon{  
+    line-height: 15px;
+    vertical-align: bottom;
+    font-size: 35px;
+    padding: 0 10px 0 0;
+}
+.home-button:hover{
+    background: #454545;
+    color: white;
+}
+.home-button:focus{
+    outline: none;
+}
+
+.home-right-hero{
+    font-family: 'Roboto', sans-serif;    
+    font-size: 55px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 100;
+    margin: 0 auto;
+    text-align: center;
+
+}
+.home-right-description{
+    font-family: "Rokkitt", serif;
+    font-size: 30px;
+    padding: 0 80px;
+    text-align: center;
+}
+@media(max-width: 420px){
+    .home-right{
+        width: 400px;
+    }
+}
+@media(max-width:1200px){
+    .home{
+      flex-direction: column;
+      margin: 0 auto;
+    }
+    .home-left{
+        text-align: center;
+    }
+    .home-left-image{
+        width:400px;
+        height: 400px;
+        text-align: center;
+        object-fit: contain;;
+        
+    }
+}
+@media(min-width:1200px){
+    .home-left-image{
+        max-width: 100%;
+        min-width: 400px;
+    }
+    .home-right-hero{
+        width: 520px;
+    }
+    .home-right-description{
+        width: 600px;
+    }
+}

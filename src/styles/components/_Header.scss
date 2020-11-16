@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+.header{
+    font-family: 'Rokkitt', serif;
+    font-size: 55px;
+
+}
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    scroll-behavior: smooth;
+    font-family:'Helvetica Neue', sans-serif;
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 10px;
+}
+.header-brands{
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-brands-title{
+    font-size: 34px;
+    margin-left:6px ;
+}
+.header-nav{
+    display: flex;
+}
+
+.header-nav-list-item {
+    margin-right: 10px;
+    padding: 2px;
+    cursor: pointer;
+    line-height: 44px;
+    position: relative;
+    font-family: 'Playfair Display', serif;
+    transition: all .3s cubic-bezier(.2, 0, 0, 1);
+
+    &:after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: inherit;
+    position: absolute;
+    bottom: 0;
+    right: .25rem;
+    left: .25rem;
+    background-color:  rgba($color:  #454545, $alpha: 0.3);
+    transition: all .3s cubic-bezier(.2, 0, 0, 1);
+    transform-origin: bottom center;
+
+    }&:hover {
+    color: white;
+    &:after {
+        right: 0;
+        left: 0;
+        height: 100%;
+    }
+}
+}
+// SMALL SCREEN VERISON
+.nav-list-item{
+    font-family: 'Playfair Display', serif;
+
+}
+.header-nav-list-item a{
+    color:black;
+    text-decoration: none;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+.header-hamburger{
+    color:black;
+    text-align: center;
+    line-height: 15px;
+    margin-right:10px ;
+}
+.header-logo{
+    width: 50px;
+    height: 40px;
+}
+.header-small-brands{
+    line-height: 1;
+    margin-left: 10px;
+    padding-top: 6px;
+}
+.header-small-title{
+    line-height: 1;
+}
+.header-container-small{
+    display: flex;
+    justify-content: space-between;
+    text-align: end;
+    line-height: 4px;
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 10px;
+}
+.header-nav-list{
+    display: flex;
+    list-style-type: none;
+}
+
+
+//MEDIA queryes
+@media(max-width:990px){
+    .header-container{
+        display: none;
+    }
+}
+@media(min-width:990px){
+    .header-container{
+        display: flex;
+    }
+    .header-container-small{
+        display: none;
+    }
+}
+
+
