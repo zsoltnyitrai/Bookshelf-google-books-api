@@ -10,7 +10,7 @@ function Books() {
 
 
     const onSearchChange= async(e)=>{
-        //IF I SEARCH FOR AUTHOR AND TITLEe
+        //IF I SEARCH FOR AUTHOR AND TITLE
         if (titleSearch.length>0&&authorSearch.length>0){
             URL=`https://www.googleapis.com/books/v1/volumes?q=intitle:${titleSearch}+inauthor:${authorSearch}&key=${API}`
         }
