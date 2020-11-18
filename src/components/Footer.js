@@ -16,7 +16,7 @@ function Footer() {
                 <div className="footer-rigth">
                     <img className='footer-logo' src={headerlogo} alt=""/>
                     <div>Bookshelf App</div>
-                    <div className="creator"> created by Zsolt Nyitrai</div>
+                    <div className="creator">created by Zsolt Nyitrai</div>
                 </div>
             </div>
         </div>
