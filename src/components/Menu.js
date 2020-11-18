@@ -10,16 +10,19 @@ function Menu() {
                 <div className = 'nav'>
                     <ul className = 'nav-list'>
                         <div className = 'nav-list-item'>
+                            <li><Link to='/'>Home</Link></li>
+                        </div>
+                        <div className = 'nav-list-item'>
                             <li><Link to='/'>About</Link></li>
                         </div>
                         <div className = 'nav-list-item'>
-                            <li><Link to='/books'>Books</Link></li>
+                            <li><Link to='/books'>Library</Link></li>
                         </div>
                         <div className = 'nav-list-item'>
-                            <li><Link to='/'>Services</Link></li>
+                            <li><Link to='/'>My Books</Link></li>
                         </div>
                         <div className = 'nav-list-item'>
-                            <li><Link to='/'>Contact</Link></li>
+                            <li><Link to='/'>My Quotes</Link></li>
                         </div>
                     </ul>
                 </div>

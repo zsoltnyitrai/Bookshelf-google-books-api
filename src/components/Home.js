@@ -1,6 +1,9 @@
 import React from 'react'
 import homeimage from'../assets/welcome-image.jpg'
 import {GoBook} from 'react-icons/go'
+import {
+    Link
+  } from "react-router-dom";
 
 function Home() {
     return (
@@ -18,11 +21,13 @@ function Home() {
                     add new ones remove them and rate them as you like
                 </div>
                 <div className="home-right-button">
-                    <button className='home-button'>
+                    <Link to='/books'>
+                        <button  className='home-button'>
                         <span className='home-button-icon-box'>
                             <GoBook className='home-button-icon'/>
-                        </span>Books
-                    </button>
+                        </span>Library
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>

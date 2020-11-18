@@ -26,8 +26,8 @@ function BookItem({title,author,language,pagecount,about,categories,image,rating
 
             <div className="book-item-description">
                 <div className="book-item-description">
-                    <div className="book-item-description-language"><GrLanguage/> {language}</div>
-                    <div className="book-item-description-categorie"><span>{categories}</span></div>
+                    <div className="book-item-description-language"><GrLanguage/> Language: {language}</div>
+                    <div className="book-item-description-categorie"><span>Category: {categories}</span></div>
                     {/* <div className="book-item-description-about">{about}</div> */}
                 </div>
             </div>

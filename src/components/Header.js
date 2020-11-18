@@ -10,6 +10,7 @@ import headerlogo from'../assets/header-logo.png'
 
 function Header() {
     const [click, setClick]=useState(false)
+
     const handleHamburger=()=>{
         setClick(!click)
     }
@@ -24,10 +25,9 @@ function Header() {
                     <div className="header-nav">
                         <ul className="header-nav-list">
                             <Link className='header-nav-list-item' to='/books'>About</Link>
-                            <Link className='header-nav-list-item' to='/books'>Books</Link>
-                            <Link className='header-nav-list-item' to='/books'>Books</Link>
-                            <Link className='header-nav-list-item' to='/books'>Books</Link>
-                            <Link className='header-nav-list-item' to='/books'>Books</Link>
+                            <Link className='header-nav-list-item' to='/books'>Library</Link>
+                            <Link className='header-nav-list-item' to='/books'>My Books</Link>
+                            <Link className='header-nav-list-item' to='/books'>My Quotes</Link>
                         </ul>
                     </div>
                 </div>

@@ -51,7 +51,7 @@ function Books() {
                     onChange={(e)=>setTitleSearch(e.target.value)} 
                     value={titleSearch}
                 />
-                <button onClick={onSearchChange}>sd</button>
+                <button onClick={onSearchChange}>SEARCH</button>
             </div>
             <div className="books-results">
                 {books.items?(books.items.filter(book=>Object.keys(book).length>0).map(book=>(

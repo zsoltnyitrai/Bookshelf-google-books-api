@@ -3,13 +3,16 @@
     font-size: 55px;
 
 }
+.header{
+    background-color: white;
+
+}
 .header-container{
     display: flex;
     justify-content: space-between;
     scroll-behavior: smooth;
     font-family:'Helvetica Neue', sans-serif;
     border-bottom: 1px solid lightgray;
-    margin-bottom: 10px;
 }
 .header-brands{
     margin-left: 10px;

@@ -2,22 +2,33 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border:1px solid lightgray;
+    border-bottom:1px solid lightgray;
     align-items: center;
     text-align: center;
     padding: 5px 10px;
     margin: 0 auto;
-    min-width: 300px;
+    width: 250px;
+
+    background-color: white;
 }
 .book-item-header{
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
 
 }
 .book-item-header-title{
-
+    font-size: 25px;
+    justify-content: center;
+    width: 70%;
+    margin: 0 auto;
 }
 .book-item-header-author{
-
+    font-size: 20px;
+    justify-content: center;
+    width: 98%;
+    margin: 12px auto 0;
 }
 .book-item-header-rating{
 
