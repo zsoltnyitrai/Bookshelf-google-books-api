@@ -1,6 +1,12 @@
 import React from 'react'
 import headerlogo from'../assets/header-logo.png'
+import { useSelector,useDispatch } from 'react-redux'
+import {increment,decrement}from '../actions'
+
 function Footer() {
+    const counter=useSelector(state=>state.counter)
+    const isLogged=useSelector(state=>state.isLogged)
+    const dispatch=useDispatch()
     return (
         <div>
             <div className="footer-main">
@@ -11,6 +17,10 @@ function Footer() {
                         <li>Contact</li>
                         <li>Login</li>
                         <li>Signup</li>
+                        <li>{counter}</li>
+                        <button onClick={()=>dispatch(increment())}>+</button>
+                        <button onClick={()=>dispatch(decrement())}>-</button>
+
                     </div>
                 </div>
                 <div className="footer-rigth">

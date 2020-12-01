@@ -20,6 +20,7 @@
 }
 .book-item-header-title{
     font-size: 25px;
+    font-weight: bold;
     justify-content: center;
     width: 70%;
     margin: 0 auto;
@@ -36,4 +37,13 @@
 .book-item-image{
     width: 100px;
     height: 200px;
+}
+.book-item-description-categorie{
+    color:rgb(192, 190, 190);
+}
+.book-item-description-language{
+    color:rgb(192, 190, 190);
+}
+.book-item-footer-pagecount{
+    color:rgb(192, 190, 190);
 }

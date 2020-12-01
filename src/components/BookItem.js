@@ -2,27 +2,22 @@ import React from 'react'
 import {AiOutlineStar} from 'react-icons/ai'
 import {GrLanguage} from 'react-icons/gr'
 
-function BookItem({title,author,language,pagecount,about,categories,image,rating}){
-    const rater=(rating)=>{
-        if (rating!==undefined){
-        for(let i=1;i<=rating;i++){
-            <div key={i}><AiOutlineStar/></div>
-            console.log(i)
-         }
-        }}
+function BookItem({title,author,language,pagecount,about,categories,image,rating,}){
+
+
     return (
         <div className='book-item'>
+            
             <div className="book-item-header">
                 
                 <div className="book-item-header-title">{title}</div>
                 <div className="book-item-header-author">{author}</div>
                 <div className="book-item-header-rating">
-                    {()=>rater(rating)}
+                    
                 </div>
             </div>
             
             <div className="book-item-img"><img src={image} className='book-item-image' alt=""/></div>
-            
 
             <div className="book-item-description">
                 <div className="book-item-description">
@@ -33,7 +28,7 @@ function BookItem({title,author,language,pagecount,about,categories,image,rating
             </div>
 
             <div className="book-item-footer">
-                <div className="book-item-footer-pagecount">{pagecount}</div>
+                <div className="book-item-footer-pagecount">page count: {pagecount}</div>
             </div>
         </div>
     )

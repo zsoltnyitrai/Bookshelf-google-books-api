@@ -3,6 +3,7 @@ import BookItem from './BookItem'
 import defaultbook from '../assets/default.jpg'
 
 function Books() {
+    let searchurl
     const API='AIzaSyCCtlMIvk5tLvK8mCWcRe4RaWn8MbsiOro'
     const [books,setBooks]=useState([])
     const [titleSearch,setTitleSearch]=useState('')
@@ -12,24 +13,22 @@ function Books() {
     const onSearchChange= async(e)=>{
         //IF I SEARCH FOR AUTHOR AND TITLE
         if (titleSearch.length>0&&authorSearch.length>0){
-            URL=`https://www.googleapis.com/books/v1/volumes?q=intitle:${titleSearch}+inauthor:${authorSearch}&key=${API}`
+            searchurl=`https://www.googleapis.com/books/v1/volumes?q=intitle:${titleSearch}+inauthor:${authorSearch}&key=${API}`
         }
         //IF I SEARCH FOR AUTHOR
         else if(titleSearch.length===0&&authorSearch.length>0){
-            URL=`https://www.googleapis.com/books/v1/volumes?q=inauthor:${authorSearch}&key=${API}`
+            searchurl=`https://www.googleapis.com/books/v1/volumes?q=inauthor:${authorSearch}&key=${API}`
         }
         //IF I SEARCH FOR TITLE
         else{
-            URL=`https://www.googleapis.com/books/v1/volumes?q=intitle:${titleSearch}&key=${API}`
+            searchurl=`https://www.googleapis.com/books/v1/volumes?q=intitle:${titleSearch}&key=${API}`
         }
-        console.log(URL)
-        await fetch(URL)
+        console.log(searchurl)
+        await fetch(searchurl)
             .then((response)=>response.json())
             .then(data=>{
                 setBooks(data)
                 console.log(books)
-                console.log(books.length)
-
             })
     }
 
@@ -58,12 +57,11 @@ function Books() {
                         <BookItem
                             key={book.id}
                             title={book.volumeInfo.title}
-                            author={book.volumeInfo.authors}
+                            author={book.volumeInfo.authors?book.volumeInfo.authors.join(', '):'?'}
                             language={book.volumeInfo.language}
-                            pagecount={book.volumeInfo.pagecount}
-                            // about={book.searchInfo.textSnippet}
+                            pagecount={book.volumeInfo.pageCount}
+                            // about={book.searchInfo.textSnippet?book.searchInfo.textSnippet:'No description'}
                             categories={book.volumeInfo.categories}
-                            // image={defaultbook}
                             image={book.volumeInfo.imageLinks?book.volumeInfo.imageLinks.thumbnail:defaultbook}
                             rating={book.volumeInfo.averageRating}
                         />)
